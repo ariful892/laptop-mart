@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Shop from './components/Shop/Shop';
 import ReactConcept from './components/ReactConcept/ReactConcept';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div >
-      <h1 className='title'>Laptop Mart</h1>
+      <Header></Header>
       <Shop></Shop>
       <ReactConcept></ReactConcept>
     </div>

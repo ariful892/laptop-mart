@@ -126,16 +126,20 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h2>Selected Laptop: {cart.length}</h2>
-                {
-                    cart.map(name => <li>{name}</li>)
-                }
+                <div className='cart'>
+                    <h2>Selected Laptop: {cart.length}</h2>
+                    {
+                        cart.map(name => <li>{name}</li>)
+                    }
 
-                <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>Choose 1 For Me</p></button>
-                <button onClick={chooseAgain} className='choose-btn'><p>Choose Again</p></button>
-                <div>
+                    <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>Choose 1 For Me</p></button>
+
                     <h3>Chosen Item: {selectItem}</h3>
+
+                    <button onClick={chooseAgain} className='choose-btn'><p>Choose Again</p></button>
+
                 </div>
+
             </div>
 
         </div>
