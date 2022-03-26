@@ -73,53 +73,47 @@ const Shop = () => {
 
     const [cart, setCart] = useState([]);
     const [productId, setProductId] = useState([]);
-    const [selectItem, setSelectItem] = useState();
-
-    // const [image, setImage] = useState([]);
+    const [selectItem, setSelectItem] = useState("");
 
     const handleAddToCart = (product) => {
         const { name, id } = product;
         const newCart = [...cart, name];
-        setCart(newCart);
-        const newId = [...productId, id];
-        setProductId(newId);
-        // const newImage = [...image,img]; 
-        // setImage(newImage);
+        if (newCart.length <= 4) {
+            setCart(newCart);
+            const newId = [...productId, id];
+            setProductId(newId);
+        }
     };
 
-    let selectedItem;
-    const chooseItem = (productId, productName) => {
+    const chooseItem = (productId, cart) => {
 
         if (productId.length === 1) {
-            setSelectItem(productName[0]);
+            setSelectItem(cart[0]);
         }
         if (productId.length > 1) {
-            let i = 0;
-            while (i) {
+            let i = 1;
+            while (i < 20) {
                 const randomNumber = Math.floor(Math.random() * 10);
                 for (let j = 1; j <= productId.length; j++) {
+                    console.log("out If", randomNumber);
+                    console.log("product id", productId[j]);
                     if (randomNumber === productId[j]) {
-                        setSelectItem(productName[j]);
+                        console.log(randomNumber);
+                        setSelectItem(cart[j]);
                         break;
                     }
                 }
                 i++;
             }
         }
-        console.log(selectedItem);
+
     }
 
     const chooseAgain = () => {
         setCart([]);
+        setSelectItem([]);
     };
 
-    /* const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data));
-    }, []); */
     return (
         <div className='shop-container'>
             <div className="products-container">
@@ -140,7 +134,7 @@ const Shop = () => {
                 <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>Choose 1 For Me</p></button>
                 <button onClick={chooseAgain} className='choose-btn'><p>Choose Again</p></button>
                 <div>
-                    <h3>Selected Item: {selectItem}</h3>
+                    <h3>Chosen Item: {selectItem}</h3>
                 </div>
             </div>
 
