@@ -1,6 +1,6 @@
 # Laptop Mart
 
-## Live website link [https://github.com/Programming-Hero-Web-Course4/lucky-one-ariful892#readme]
+## Live website link [https://laptop-mart-ariful892.netlify.app/]
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

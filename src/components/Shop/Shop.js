@@ -132,11 +132,11 @@ const Shop = () => {
                         cart.map(name => <li>{name}</li>)
                     }
 
-                    <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>Choose 1 For Me</p></button>
+                    <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>CHOOSE 1 FOR ME</p></button>
 
                     <h3>Chosen Item: {selectItem}</h3>
 
-                    <button onClick={chooseAgain} className='choose-btn'><p>Choose Again</p></button>
+                    <button onClick={chooseAgain} className='choose-btn'><p>CHOOSE AGAIN</p></button>
 
                 </div>
 
