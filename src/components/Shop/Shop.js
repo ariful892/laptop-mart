@@ -72,13 +72,45 @@ const Shop = () => {
     ];
 
     const [cart, setCart] = useState([]);
+    const [productId, setProductId] = useState([]);
+    const [selectItem, setSelectItem] = useState();
+
+    // const [image, setImage] = useState([]);
 
     const handleAddToCart = (product) => {
-        console.log(product);
-        const { name } = product;
-        console.log(name);
+        const { name, id } = product;
         const newCart = [...cart, name];
         setCart(newCart);
+        const newId = [...productId, id];
+        setProductId(newId);
+        // const newImage = [...image,img]; 
+        // setImage(newImage);
+    };
+
+    let selectedItem;
+    const chooseItem = (productId, productName) => {
+
+        if (productId.length === 1) {
+            setSelectItem(productName[0]);
+        }
+        if (productId.length > 1) {
+            let i = 0;
+            while (i) {
+                const randomNumber = Math.floor(Math.random() * 10);
+                for (let j = 1; j <= productId.length; j++) {
+                    if (randomNumber === productId[j]) {
+                        setSelectItem(productName[j]);
+                        break;
+                    }
+                }
+                i++;
+            }
+        }
+        console.log(selectedItem);
+    }
+
+    const chooseAgain = () => {
+        setCart([]);
     };
 
     /* const [products, setProducts] = useState([]);
@@ -100,12 +132,18 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h2>Selected Laptop </h2>
+                <h2>Selected Laptop: {cart.length}</h2>
                 {
                     cart.map(name => <li>{name}</li>)
                 }
 
+                <button onClick={() => chooseItem(productId, cart)} className='choose-btn'><p>Choose 1 For Me</p></button>
+                <button onClick={chooseAgain} className='choose-btn'><p>Choose Again</p></button>
+                <div>
+                    <h3>Selected Item: {selectItem}</h3>
+                </div>
             </div>
+
         </div>
     );
 };

@@ -21,10 +21,10 @@
     justify-content: center;
 }
 
-.btn-text{
-    margin-right: 5px;
-}
-
 .cart-btn:hover{
     background-color: orange;
+}
+
+.btn-text{
+    margin-right: 5px;
 }
