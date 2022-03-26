@@ -16,6 +16,13 @@
     width: 100%; 
     border: none;
     background-color: rgb(243, 209, 145);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text{
+    margin-right: 5px;
 }
 
 .cart-btn:hover{
