@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "price": "$4,857.06",
+        "picture": "../src/images/image1.jpg",
+        "name": "Apple Mac Book"
+    },
+    {
+        "id": "2",
+        "price": "$4,813.95",
+        "picture": "../src/images/image2.jpg",
+        "name": "Apple Premium"
+    },
+    {
+        "id": "3",
+        "price": "$4,608.11",
+        "picture": "../src/images/image3.jpg",
+        "name": "Apple Note Book"
+    },
+    {
+        "id": "4",
+        "price": "$3,672.66",
+        "picture": "../src/images/image4.jpg",
+        "name": "HP pavilion 15"
+    },
+    {
+        "id": "5",
+        "price": "$3,365.02",
+        "picture": "../src/images/image5.jpg",
+        "name": "HP Ultra H15"
+    },
+    {
+        "id": "6",
+        "price": "$3,165.62",
+        "picture": "../src/images/image6.jpg",
+        "name": "HP Gladiator 4S"
+    },
+    {
+        "id": "7",
+        "price": "$2,596.28",
+        "picture": "../src/images/image7.jpg",
+        "name": "Dell Ultra 5S"
+    },
+    {
+        "id": "8",
+        "price": "$2,596.28",
+        "picture": "../src/images/image8.jpg",
+        "name": "Dell Premium 12"
+    },
+    {
+        "id": "9",
+        "price": "$2,596.28",
+        "picture": "../src/images/image9.jpg",
+        "name": "Dell Note 30"
+    }
+]

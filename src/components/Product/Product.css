@@ -1,0 +1,17 @@
+.product-container{
+   box-shadow: 3px gray;
+}
+
+.product-container img{
+    border-radius: 10px;
+ }
+
+.cart-btn{
+    width: 100%; 
+    border: none;
+    background-color: rgb(243, 209, 145);
+}
+
+.cart-btn:hover{
+    background-color: orange;
+}
